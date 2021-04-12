@@ -1,26 +1,27 @@
+from math import ceil, floor
+
 class Karatsuba:
-    def normalize_size(self, a, b):
-        size_a = len(a)
-        size_b = len(b)
-
-        # Padronizar para que a menor string seja a string 'a'
-        if size_a > size_b:
-            a, b = b, a
-            size_a, size_b = size_b, size_a
-        
-        # Igualando os tamanhos
-        while size_a < size_b:
-            a = '0' + a
-            size_a += 1
-        
-        power = 1
-
-        while power < size_a:
-            power *= 2
-        
-        a = '0'*(power - size_a) + a
-        b = '0'*(power - size_b) + b
     
-    def multiply(self, a, b):
-        # Para facilitar podemos deixar as duas strings com tamanho em potência de 2
-        a, b = normalize_size(str(a), str(b))
+    def multiply(self, x, y):
+
+        # Caso base
+        if x < 10 and y < 10:
+            return x*y
+        
+        size = max(len(str(x)), len(str(y)))
+
+        # x = a*10**(size/2) + b
+        # y = c*10**(size/2) + d
+
+        n_size = ceil(size // 2)
+        power = 10**n_size
+        a = floor(x // power)
+        b = x % power
+        c = floor(y // power)
+        d = y % power
+
+        ac = self.multiply(a, c)
+        bd = self.multiply(b, d)
+        e = self.multiply(a+b, c+d)
+
+        return int(10 ** (2 * n_size) * ac + (10 ** n_size) * e + bd)
