@@ -1,6 +1,8 @@
 from math import ceil, floor
 
 class Karatsuba:
+    def __init__(self):
+        pass
     
     def multiply(self, x, y):
 
@@ -13,11 +15,11 @@ class Karatsuba:
         # x = a*10**(size/2) + b
         # y = c*10**(size/2) + d
 
-        n_size = ceil(size // 2)
+        n_size = ceil(size / 2)
         power = 10**n_size
-        a = floor(x // power)
+        a = floor(x / power)
         b = x % power
-        c = floor(y // power)
+        c = floor(y / power)
         d = y % power
 
         ac = self.multiply(a, c)
