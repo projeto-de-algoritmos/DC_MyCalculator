@@ -12,18 +12,18 @@ class Karatsuba:
         
         size = max(len(str(x)), len(str(y)))
 
-        # x = a*10**(size/2) + b
-        # y = c*10**(size/2) + d
-
         n_size = ceil(size / 2)
         power = 10**n_size
-        a = floor(x / power)
+
+        a = x // power
         b = x % power
-        c = floor(y / power)
+        c = y // power
         d = y % power
 
         ac = self.multiply(a, c)
         bd = self.multiply(b, d)
-        e = self.multiply(a+b, c+d)
+        e = self.multiply(a+b, c+d) - ac - bd
 
-        return int(10 ** (2 * n_size) * ac + (10 ** n_size) * e + bd)
+
+        response = int(10 ** (size) * ac + (10 ** n_size) * e + bd)
+        return response
