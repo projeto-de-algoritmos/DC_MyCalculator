@@ -15,6 +15,14 @@ class Multiply:
         n_size = ceil(size // 2)
         power = 10**n_size
 
+        # x = a * power + b
+        # y = c * power + d
+        # x * y = (a*power + b)*(c*power + d)
+        # x * y = a*c*power**2 + a*d*power + c*b*power + b*d
+        # x * y = a*c*power**2 + power*(a*d + c*b) + b*d
+        # a*d + c*b = (a + b)*(c + d) - a*c - b*d
+        # x * y = a*c*power**2 + power*((a + b)*(c + d) - a*c - b*d) + b*d
+        
         a = x // power
         b = x % power
         c = y // power
@@ -23,7 +31,6 @@ class Multiply:
         ac = self.karatsuba(a, c)
         bd = self.karatsuba(b, d)
         e = self.karatsuba(a+b, c+d) - ac - bd
-
 
         response = int(10 ** (n_size*2) * ac + (10 ** n_size) * e + bd)
         return response

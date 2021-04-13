@@ -17,4 +17,3 @@ time_naive = time.time() - time_naive
 
 print(f'O algoritmo de Karatsuba demorou {time_karatsuba} aprensentando o resultado {response_karatsuba}')
 print(f'O algoritmo de padrão demorou {time_naive} aprensentando o resultado {response_naive}')
-print(f'Apresentou diferença de {response_karatsuba - response_naive}')
