@@ -13,7 +13,12 @@
 É apenas uma calculadora que multiplica dois números. A diferença é que ele é mais rápido que o algoritmo naive e usa a divisão e conquista para melhorar o desempenho. Uma nota: ele é pior com numeros pequenos, mas melhora em relação ao naive quando aumenta o numero.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![primeira tela](screenshots/primeiratela.png)
+<br>
+![segunda tela](screenshots/segundatela.png)
+<br>
+![terceira tela](screenshots/terceiratela.png)
+<br>
 
 ## Instalação 
 **Linguagem**: Python3.8
