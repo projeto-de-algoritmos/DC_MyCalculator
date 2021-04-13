@@ -1,44 +1,32 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# MyCalculator
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 4
+**Conteúdo da Disciplina**: DC (Dividir e conquistar)
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0033743  |  João Pedro Silva de Carvalho |
+| 18/0028324  |  Thiago Luiz de Souza Gomes |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+É apenas uma calculadora que multiplica dois números. A diferença é que ele é mais rápido que o algoritmo naive e usa a divisão e conquista para melhorar o desempenho. Uma nota: ele é pior com numeros pequenos, mas melhora em relação ao naive quando aumenta o numero.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python3.8
+
+Necessita apenas do python3.8 instalado na máquina.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Na raiz do repositório apenas digite:
+
+~~~Shell
+python3 main.py
+~~~
 
 
 
